@@ -9,7 +9,10 @@ Instructions
 
 
 First Task :
+
+
 You are asked to write an algorithm that fulfills the following: 
+
 
 Name: Dot product
 Description:
