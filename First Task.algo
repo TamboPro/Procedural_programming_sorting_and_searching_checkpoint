@@ -1,0 +1,36 @@
+//Function to calculate dot product
+FUNCTION dotProduct(V1[], V2[] : ARRAY_OF_INTEGER)
+VAR 
+     product, i, n : INTEGER; 
+BEGIN
+    n := 3;
+    //Loop instruction to calculate dot product
+    FOR i FROM 0 TO i < n STEP 1 DO
+         product = product + V1[i] * V2[i];
+  RETURN product;
+END
+
+//Procedure to determine if two vectors are orthogonal
+PROCEDURE orthogonalVectors(vectors[n][n] : ARRAY_OF_INTEGER)
+VAR
+    V1[] : ARRAY_OF_INTEGER;
+    V2[] : ARRAY_OF_INTEGER;
+    i, j, k, dot_Product : INTEGER;
+BEGIN 
+    k = 3;
+    // Loop instruction to determine if two vectors are orthogonal from n pairs vectors   
+    FOR i FROM 0 TO i < vectors.Length STEP 1 DO 
+        FOR j FROM 0 TO i < k STEP 1 DO
+            V1[j] := vectors[j][0];
+            V2[j] := vectors[0][j];
+        END_FOR
+
+        dot_Product := dotProduct(V1, V2);
+        IF(dot_Product <> 0) THEN
+            Write("The vectors" + V1 + "and" + V2 + "is not orthogonal");
+        END_IF
+        ELSE
+            Write("The vectors" + V1 + "and" + V2 + "are orthogonal");
+        END_ELSE
+    END_FOR        
+END
